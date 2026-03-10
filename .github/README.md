@@ -2,6 +2,14 @@
 
 Materials used to deliver the (optional) undergrad course *Introduction to Numerical Relativity* at IFA-UV (2025).
 
+## Setup
+
+This repository uses a Hugo theme as a git submodule. After cloning, run:
+
+```bash
+git submodule update --init --recursive
+```
+
 ## Course website
 The [course website](https://crisbh.github.io/numerical-relativity-intro/) is deployed via github actions. The build action will be triggered automatically by commits to `main`.
 
