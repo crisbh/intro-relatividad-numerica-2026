@@ -1,7 +1,8 @@
 ---
 marp: true
-paginate: true
+paginate: false
 math: katex
+theme: default
 html: true
 style: |
   section {
@@ -12,8 +13,8 @@ style: |
   img {
     display: block;
     margin: auto;
-    width: 70%; /* Increase size */
-    max-width: 70%;
+    width: 60%;
+    max-width: 100%;
   }
   .video-container {
     position: relative;
@@ -32,9 +33,16 @@ style: |
   }
 ---
 
+
 # **Introducción a la Relatividad Numérica**
 ## Clase 1
 ## Información del curso e introducción
+
+<br>
+
+    Dr. Cristian Barrera Hinojosa
+    Instituto de Física y Astronomía
+    Universidad de Valparaíso
 
 ---
 
@@ -63,6 +71,24 @@ En este curso, aprenderemos sobre:
 - La primera parte del curso será principalmente teórica (~1 mes).
 - Luego, nos concentraremos en la parte numérica y aplicaciones.
 
+---
+
+# **Motivación**
+
+La Relatividad General (RG) es la **teoría moderna de la gravitación**, pero no es facil lidiar con ella:
+
+- Ecuaciones altamente **no lineales**
+- **Pocas soluciones analíticas**
+- Fenómenos **dinámicos**  complejos (e.g. colapso gravitacional)
+
+La RN ofrece una vía para resolver numéricamente:
+
+$$
+\boxed{
+G_{\mu\nu} = 8\pi G T_{\mu\nu}
+}
+$$
+
 
 ---
 
@@ -75,15 +101,17 @@ En este curso, aprenderemos sobre:
 
 ---
 
-## **La gravedad y el espaciotiempo** 
-
-![Curved Spacetime](images/Sun-Earth-Moon-Space-Time.jpg)
-
-
----
-## **Los agujeros negros** 
-
-![BH](images/Black_hole.webp)
+<img src="images/Black_hole.webp"
+     style="
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       opacity: 0.95;
+       z-index: 0;
+     ">
 
 
 ---
@@ -97,14 +125,13 @@ En este curso, aprenderemos sobre:
     </iframe>
 </div>
 
-
 ---
 
 ## **Las ondas gravitacionales**
 
-- En 2015, LIGO detectó por primera vez una señal de ondas gravitacionales generadas por la fusión de dos agujeros negros.
-- Este evento confirmó una predicción importante de la Relatividad General de Einstein: la existencia de dichas ondas.
-- Además, abrió una nueva era en la astronomía observacional.
+- En 2015, LIGO-VIRGO detectó por **primera vez** una señal de ondas gravitacionales generadas por la fusión de dos agujeros negros.
+- Este evento confirmó una predicción importante de la RG: la **existencia** de dichas ondas.
+<!-- - Además, abrió una nueva era en la astronomía observacional. -->
 - Actualmente se planean nuevos proyectos para medir ondas gravitacionales en el futuro, incluso en el espacio (LISA).
 
 ---
@@ -115,10 +142,121 @@ En este curso, aprenderemos sobre:
 
 ---
 
-<!-- ![GW signal](images/LIGO_measurement_of_gravitational_waves.svg) -->
+# **RN en el contexto moderno**
+
+- Detectores LIGO/Virgo/KAGRA requieren modelos teóricos precisos. 
+- Señales de ondas gravitacionales poseen fases:  
+  *Inspiral → Merger → Ringdown*.
+- RN es el **único** método para obtener la fase de merger correctamente.
+
+
+---
+
 <div style="text-align: center;">
-  <img src="images/LIGO_measurement_of_gravitational_waves.svg" width="200px">
+  <img src="images/LIGO_measurement_of_gravitational_waves.svg" style="width:780px;">
 </div>
+
+---
+
+
+<!-- ## **La gravedad y el espaciotiempo**  -->
+
+<!-- <br> -->
+
+<!-- <div style="text-align: center;"> -->
+  <!-- <img src="../images/Sun-Earth-Moon-Space-Time.jpg" style="width:600px;"> -->
+<!-- </div> -->
+<!-- Background image -->
+<img src="images/Sun-Earth-Moon-Space-Time.jpg"
+     style="
+       position: absolute;
+       top: 0; left: 0;
+       width: 100%; height: 100%;
+       object-fit: cover;
+       opacity: 0.85;
+       z-index: 0;
+     ">
+
+<!-- White overlay -->
+<div style="
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.05);  /* semi-transparent white */
+  z-index: 1;
+"></div>
+
+<!-- Equation -->
+<div style="
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  color: black;        /* ensure good contrast */
+">
+
+$$
+\colorbox{white}{
+  $\displaystyle
+  G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R\,g_{\mu\nu} = 8\pi G\,T_{\mu\nu}
+  $
+}
+$$
+
+<!-- </div> -->
+<!-- <img src="../images/Sun-Earth-Moon-Space-Time.jpg" -->
+<!--      style=" -->
+<!--        position: absolute; -->
+<!--        top: 0; -->
+<!--        left: 0; -->
+<!--        width: 100%; -->
+<!--        height: 100%; -->
+<!--        object-fit: cover; -->
+<!--        opacity: 0.95; -->
+<!--        z-index: 0; -->
+<!--      "> -->
+<!---->
+<!-- <div style=" -->
+<!--   position: absolute; -->
+<!--   top: 0; left: 0; -->
+<!--   width: 100%; height: 110%; -->
+<!--   background: rgba(0,0,0,0.35); -->
+<!--   z-index: 1; -->
+<!-- "></div> -->
+<!---->
+<!-- <div style=" -->
+<!--   position: absolute; -->
+<!--   top: 40%; -->
+<!--   width: 100%; -->
+<!--   text-align: center; -->
+<!--   z-index: 3; -->
+<!-- "> -->
+<!---->
+<!-- $$ -->
+<!-- \boxed{ -->
+<!-- G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R\,g_{\mu\nu} = 8\pi G\,T_{\mu\nu} -->
+<!-- } -->
+<!-- $$ -->
+
+
+
+
+
+---
+
+# **La gravedad según Einstein**
+
+Einstein propone que:
+
+> *La gravedad no es una fuerza*.
+> *Es la manifestación de la deformación del espaciotiempo*.
+
+Es una teoría **geométrica**, donde objeto fundamental es:
+
+$$
+g_{\mu\nu} \quad \leftarrow \text{la métrica del espaciotiempo}
+$$
 
 
 ---
@@ -133,8 +271,8 @@ donde
 - $g_{\mu \nu}$: métrica del espaciotiempo $\to$ la geometría.
 - $T_{\mu \nu}$: tensor energía-momento $\to$ materia y energía.
 - $\Lambda$: constante cosmológica $\to$ expansión del universo.
-
 ---
+
 
 ## **Desafíos Computacionales**
 
@@ -168,13 +306,14 @@ La Relatividad Numérica no solo es relevante en la investigación teórica, sin
 
 ## **Evaluaciones del curso** 
 - Tareas de ejercicios propuestos (30%)
-    - Tarea 1: entrega semana 4 del curso.
-    - Tarea 2: entrega semana 7 del curso.
+    - Tarea 1: semana 5 del curso, con plazo de 3 semanas.
+    - Tarea 2: semana 9 del curso, con plazo de 3 semanas.
 - Un proyecto de investigación sobre un tópico afín:
-  - Presentación de avance: 26 de junio (20%)
-  - Presentación final: 10 y 17 de julio (50%)
+  - Presentación de avance: 17 de junio (20%)
+  - Presentación final: 7 y 8 de julio (50%)
 
-- Prueba Extraordinaria: 23 de julio.
+- Recuperativa (tareas): 14 de julio
+- Prueba Extraordinaria: 15 de julio.
 
 ---
 
