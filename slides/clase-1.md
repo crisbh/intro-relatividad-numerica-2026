@@ -58,10 +58,10 @@ style: |
 ## **Objetivos del curso**
 
 En este curso, aprenderemos sobre:
+- Las bases de la Relatividad General de Einstein.
 - Los conceptos fundamentales de la Relatividad Numérica.
 - Las principales aplicaciones en astrofísica y gravitación.
-- Los desafíos computacionales que aparecen al intentar resolver las ecuaciones de Einstein.
-- El rol de las simulaciones numéricas en el estudio de fenómenos gravitacionales extremos.
+- Los métodos numéricos para resolver las ecuaciones de Einstein.
 
 ---
 
@@ -73,7 +73,7 @@ En este curso, aprenderemos sobre:
 
 ---
 
-# **Motivación**
+## **Motivación**
 
 La Relatividad General (RG) es la **teoría moderna de la gravitación**, pero no es facil lidiar con ella:
 
@@ -92,14 +92,6 @@ $$
 
 ---
 
-## **Aplicaciones de la Relatividad Numérica**
-
-- **Ondas gravitacionales:** Permite predecir y analizar señales detectadas por observatorios como LIGO y Virgo.
-- **Colisión de agujeros negros y estrellas de neutrones:** Permite modelar estos eventos y predecir sus efectos observacionales.
-- **Colapso gravitacional y formación de agujeros negros:** Permite estudiar cómo se forman estos objetos.
-- **Cosmología computacional:** Permite estudiar la evolución del universo y poner a prueba distintas teorías de la gravitación.
-
----
 
 <img src="images/Black_hole.webp"
      style="
@@ -273,6 +265,15 @@ donde
 - $\Lambda$: constante cosmológica $\to$ expansión del universo.
 ---
 
+## **Aplicaciones de la Relatividad Numérica**
+
+- **Ondas gravitacionales:** Permite predecir y analizar señales detectadas por observatorios como LIGO y Virgo.
+- **Colisión de agujeros negros y estrellas de neutrones:** Permite modelar estos eventos y predecir sus efectos observacionales.
+- **Colapso gravitacional y formación de agujeros negros:** Permite estudiar cómo se forman estos objetos.
+- **Cosmología computacional:** Permite estudiar la evolución del universo y poner a prueba distintas teorías de la gravitación.
+
+---
+
 
 ## **Desafíos Computacionales**
 
@@ -294,6 +295,9 @@ La Relatividad Numérica no solo es relevante en la investigación teórica, sin
 ---
 
 ## **Contenidos del curso** 
+
+
+<!-- incremental -->
 
 - Comenzaremos con una introducción a la Relatividad General.
   - Conceptos principales (no exhaustivo): el espaciotiempo y la métrica, la curvatura, las Ecuaciones de Einstein.
