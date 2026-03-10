@@ -14,7 +14,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
-        submodules: true  # Ensures Hugo themes are cloned
+        submodules: recursive  # Ensures Hugo themes are cloned
 
     # Step 2: Install the latest Hugo Extended
     - name: Install Hugo Extended
@@ -38,7 +38,7 @@ jobs:
 
     # Step 5: Build the Hugo site
     - name: Build Hugo Site
-      run: hugo --minify --cleanDestinationDir --theme hugo-book
+      run: hugo --minify --cleanDestinationDir
 
     # Step 6: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages

@@ -1,4 +1,4 @@
-baseURL = "https://crisbh.github.io/numerical-relativity-intro/"
+baseURL = "https://crisbh.github.io/intro-relatividad-numerica-2026/"
 languageCode = "es"
 title = "Introducción a la Relatividad Numérica"
 theme = "book"
@@ -33,4 +33,5 @@ enableEmoji = true
     name = "📖 Tareas"
     url = "/homeworks/"
     weight = 6
+    draft = true
 
