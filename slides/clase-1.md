@@ -48,7 +48,7 @@ style: |
 
 ## **¿Qué es la Relatividad Numérica?**
 
-- La **Relatividad Numérica** es la rama de la física computacional que estudia soluciones de las ecuaciones de Einstein mediante técnicas numéricas.
+- La **Relatividad Numérica** (RN) es la rama de la física computacional que estudia soluciones de las ecuaciones de Einstein mediante técnicas numéricas.
 - Permite explorar fenómenos gravitacionales que:
   - La gravedad Newtoniana no es capaz de describir.
   - Los métodos analíticos no son capaces de resolver.
